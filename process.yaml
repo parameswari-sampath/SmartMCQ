@@ -1,0 +1,55 @@
+SPRINT 1: Project Setup & Authentication
+Goal: Users can register, login, and access the platform
+
+1. django project creation
+2. nextjs project creation
+3. django app creation for users
+4. database connection with postgres
+5. user model setup
+6. POST /api/auth/register - user registration
+7. UI - registration page
+8. POST /api/auth/login - user login
+9. UI - login page
+10. POST /api/auth/logout - user logout
+11. GET /api/auth/user - get current user info
+12. UI - authentication setup and protected routes
+
+SPRINT 2: Test Management (CRUD)
+Goal: Teachers can create, view, edit, and delete tests
+
+13. test model creation (title, description, created_by)
+14. POST /api/tests/ - create new test
+15. UI - create test form
+16. GET /api/tests/ - get all tests (public)
+17. UI - browse tests page (student view)
+18. GET /api/tests/my/ - get user's own tests
+19. UI - my tests dashboard (teacher view)
+20. GET /api/tests/{id}/ - get specific test details
+21. PUT /api/tests/{id}/ - update test
+22. UI - edit test form
+23. DELETE /api/tests/{id}/ - delete test
+24. UI - delete test functionality
+
+SPRINT 3: Question Management
+Goal: Teachers can add, view, edit, and delete questions for their tests
+
+25. question model creation (question_text, option_a, option_b, option_c, option_d, correct_answer)
+26. POST /api/tests/{test_id}/questions/ - add question to test
+27. UI - add question form
+28. GET /api/tests/{test_id}/questions/ - get all questions for a test
+29. UI - view questions list
+30. PUT /api/questions/{id}/ - update question
+31. UI - edit question form
+32. DELETE /api/questions/{id}/ - delete question
+33. UI - delete question functionality
+
+SPRINT 4: Test Taking & Results
+Goal: Students can take tests and view their results
+
+34. test result model creation (user, test, score, completed_at)
+35. POST /api/tests/{test_id}/submit/ - submit test answers
+36. UI - take test interface
+37. GET /api/results/ - get user's test results
+38. UI - results history page
+39. GET /api/results/{test_id}/ - get specific test result
+40. UI - individual result page
